@@ -1,0 +1,13 @@
+{
+  "name": "qr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/YuheiFUJITA/qr.git",
+  "author": "Yuhei FUJITA <contact@fujita.dev>",
+  "license": "MIT",
+  "private": true,
+  "workspaces":[
+    "pwa",
+    "common"
+  ]
+}
