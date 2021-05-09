@@ -110,10 +110,13 @@ export default class WriterView extends Vue {
   }
 
   async created(): Promise<void> {
-    if (this.$route.query.s) {
-      this.result = await this.qrCodeMaker.makeQr(
-        this.$route.query.s as string
-      );
+    let str =
+      this.$route.query.text ||
+      this.$route.query.title ||
+      this.$route.query.url ||
+      "";
+    if (str) {
+      this.result = await this.qrCodeMaker.makeQr(str as string);
       this.isOpenResult = true;
     }
   }
