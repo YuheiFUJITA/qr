@@ -6,8 +6,13 @@
   "author": "Yuhei FUJITA <contact@fujita.dev>",
   "license": "MIT",
   "private": true,
-  "workspaces":[
-    "pwa",
-    "common"
-  ]
+  "scripts": {
+    "serve": "yarn workspace pwa serve",
+    "build": "yarn workspace pwa build"
+  },
+  "workspaces": {
+      "packages": [
+          "pwa"
+      ]
+  }
 }
