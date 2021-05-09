@@ -24,7 +24,7 @@
       "name": "QRコード作成",
       "short_name": "作成",
       "description": "QRコードの作成画面を開く",
-      "url": "/reader?utm_source=homescreen",
+      "url": "/writer?utm_source=homescreen",
       "icons": [
         {
           "src": "/img/shortcuts/shortcut_writer.png",
