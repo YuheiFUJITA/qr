@@ -2,6 +2,23 @@
   "name": "QRコード Reader/Writer",
   "short_name": "QR R/W",
   "description": "QRコードの読み取り・作成ができるツールです。",
+  "screenshots": [
+    {
+      "src": "/img/screenshots/screenshot_1.png",
+      "type": "image/png",
+      "size": "1125 × 2436"
+    },
+    {
+      "src": "/img/screenshots/screenshot_2.png",
+      "type": "image/png",
+      "size": "1125 × 2436"
+    },
+    {
+      "src": "/img/screenshots/screenshot_3.png",
+      "type": "image/png",
+      "size": "1125 × 2436"
+    }
+  ],
   "theme_color": "#607D8B",
   "background_color": "#37474F",
   "display": "standalone",
