@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "prod": "fujita-qr-prod",
+    "dev": "fujita-qr-dev"
+  }
+}
