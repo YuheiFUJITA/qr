@@ -30,8 +30,9 @@ jobs:
       - name: Lint
         run: yarn workspace pwa lint
 
-      - name: Jest
-        run: yarn workspace pwa test:unit
+      # TODO テスト未実装
+      # - name: Jest
+      #   run: yarn workspace pwa test:unit
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
