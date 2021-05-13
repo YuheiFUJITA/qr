@@ -20,6 +20,12 @@ import { SettingsModule } from "./store/modules/settings";
 export default class App extends Vue {
   created(): void {
     this.$vuetify.theme.dark = SettingsModule.isDark;
+    if (
+      this.$route.query.source == "pwa" &&
+      this.$route.name != SettingsModule.launchView
+    ) {
+      this.$router.replace({ name: SettingsModule.launchView });
+    }
   }
 }
 </script>

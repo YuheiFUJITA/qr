@@ -27,7 +27,7 @@ export default class SettingsTheme extends Vue {
     this.$vuetify.theme.dark = SettingsModule.isDark;
   }
 
-  radioGroupItems: Array<BaseRadioGroupItem> = [
+  radioGroupItems: Array<BaseRadioGroupItem<Theme>> = [
     {
       label: "システム設定を反映する",
       value: "system",

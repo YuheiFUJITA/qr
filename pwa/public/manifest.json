@@ -23,7 +23,7 @@
   "background_color": "#37474F",
   "display": "standalone",
   "scope": "/",
-  "start_url": "/",
+  "start_url": "/?source=pwa",
   "share_target": {
     "action": "/writer",
     "method": "GET",
