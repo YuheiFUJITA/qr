@@ -12,7 +12,7 @@
 <script lang="ts">
 import { Component, Prop, VModel, Vue } from "vue-property-decorator";
 
-export interface BaseRadioGroupItem {
+export interface BaseRadioGroupItem<T> {
   /**
    * ラジオボタンに表示する値
    */
@@ -20,24 +20,21 @@ export interface BaseRadioGroupItem {
   /**
    * ラジオボタン選択時の値
    */
-  value: number | string | boolean;
+  value: T;
 }
 
 @Component
-export default class BaseRadioGroup extends Vue {
+export default class BaseRadioGroup<T> extends Vue {
   /**
    * 選択された値
    */
-  @VModel({ type: [Number, String, Boolean], required: true }) selectedValue!:
-    | number
-    | string
-    | boolean;
+  @VModel({ required: true }) selectedValue!: T;
 
   /**
    * 選択肢
    */
   @Prop({ type: Array, required: true })
-  readonly items!: Array<BaseRadioGroupItem>;
+  readonly items!: Array<BaseRadioGroupItem<T>>;
 
   /**
    * 並べる方向

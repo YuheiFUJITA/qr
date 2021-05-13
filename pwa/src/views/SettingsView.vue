@@ -8,6 +8,8 @@
         <v-list subheader>
           <v-subheader>全般</v-subheader>
           <settings-theme></settings-theme>
+          <v-divider></v-divider>
+          <settings-launch-view></settings-launch-view>
         </v-list>
       </v-col>
     </v-row>
@@ -17,7 +19,8 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import SettingsTheme from "../components/settings/SettingsTheme.vue";
+import SettingsLaunchView from "../components/settings/SettingsLaunchView.vue";
 
-@Component({ components: { SettingsTheme } })
+@Component({ components: { SettingsTheme, SettingsLaunchView } })
 export default class SettingsView extends Vue {}
 </script>
