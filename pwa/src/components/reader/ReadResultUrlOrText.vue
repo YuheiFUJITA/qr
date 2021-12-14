@@ -10,6 +10,12 @@
           URLを開く
         </v-btn>
       </v-col>
+      <v-col v-if="isUrl" cols="12">
+        <v-btn block @click="openUrl">
+          <v-icon>share</v-icon>
+          共有する
+        </v-btn>
+      </v-col>
       <v-col cols="12">
         <base-copy-to-clipboard-btn
           v-if="isUrl(textOrUrl)"
@@ -33,8 +39,25 @@ export default class ReadResultUrlOrText extends Vue {
 
   isUrl = isUrl;
 
+  get isSupportWebShareApi(): boolean {
+    return !!navigator.share;
+  }
+
   openUrl(): void {
     window.open(this.textOrUrl);
+  }
+
+  async shareResult(): Promise<void> {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          text: this.textOrUrl,
+          title: "読み取り結果",
+        });
+      } catch (err) {
+        console.log(err);
+      }
+    }
   }
 }
 </script>
