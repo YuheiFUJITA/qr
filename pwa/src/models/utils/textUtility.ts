@@ -51,7 +51,7 @@ export function serializeWifiInfo(
   password: string,
   encrypt: WifiEncrypts
 ): string {
-  return `WIFI:S:${ssid};T:${password};P:${encrypt};;`;
+  return `WIFI:S:${ssid};T:${encrypt};P:${password};;`;
 }
 
 export class NotWifiFormatText extends Error {
